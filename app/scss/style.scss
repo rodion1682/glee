@@ -3,6 +3,221 @@
 @import 'reset';
 @import 'global';
 
+// header setcion setup starts ////////////////////////////
+
+.header{
+  padding: 49px 0;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+}
+
+// menu setup starts
+
+.menu{
+  &__list{
+    display: flex;
+  }
+  &__list-item + .menu__list-item{
+    padding-left: 31px;
+  }
+  &__list-link{
+    color: inherit;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 12px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+    &:hover{
+      border-bottom: 1px solid $default;
+    }
+
+  }
+}
+
+// menu setup ends
+
+// user-nav setup starts
+
+.user-nav{
+  display: flex;
+  align-items: center;
+  &__link{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image{
+    width: 20px;
+    height: 20px;
+  }
+  &__inner{
+    padding: 0 10px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    height: 51px;
+    width: 178px;
+    background-color: #fcd7b6;
+    border-radius: 25.5px;
+  }
+  &__number{
+    position: absolute;
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 7px;
+    right: -7px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 16px;
+    color: $title;
+    @extend %roboto-400;
+  }
+  &__link--more,
+  &__link--search{
+    width: 51px;
+    height: 51px;
+    border-radius: 50%
+  }
+  &__link--search{
+    background-color: #edf1f4;
+  }
+  &__link--more{
+    background-color: #a3bbc8;
+  } 
+}
+
+// user-nav setup ends
+
+// header setcion setup ends ////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+// footer setcion setup starts ////////////////////////////
+
+.footer{
+  padding-top: 79px;
+}
+
+// footer-top setup starts
+
+.footer-top{
+  display: flex;
+  padding-bottom: 67px;
+  border-bottom: 1px solid #dae4e9;
+  &__item-contacts{
+    width: 200px;
+    margin-right: 90px;
+  }
+  &__item-navigation{
+    width: 130px;
+    margin-right: 160px;
+  }
+  &__item-form{
+    width: 270px;
+  }
+  &__logo{
+    margin-bottom: 26px;
+    display: block
+  }
+  &__adress,
+  &__phone,
+  &__email{
+    display: block;
+    margin-bottom: 8px;
+  }
+  &__title{
+    font-size: 16px;
+    line-height: 21px;
+    color: $dark;
+    text-transform: uppercase;
+    @extend %dmsans-700;
+    margin: 14px 0 24px 0;
+  }
+  &__list-link{
+    display: block;
+    margin-bottom: 8px;
+  }
+  &__item-text{  
+    font-size: 14px;
+    line-height: 24px;
+    color: $link;
+    margin-bottom: 37px;
+    @extend %rubik-400;
+
+  }
+  &__form{
+    display: flex;
+  }
+  &__form-input{
+    @extend %dmsans-500;
+    max-width: 170px;
+    width: 100%;
+    outline-color: #234969;
+    font-size: 13px;
+    line-height: 24px;
+    color: #234969;
+    background-color: $bgc;
+    border: none;
+    padding: 13px 15px 14px;
+
+    &::placeholder{
+      @extend %dmsans-500;
+      color: #234969;
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
+  &__form-btn{
+    border: none;
+    outline-color: #234969;
+    @extend %dmsans-400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+    background-color: #a3bbc8;
+    padding: 0 19px;
+    cursor: pointer;
+  } 
+}
+
+// footer-top setup ends
+
+// footer-bottom setup starts
+
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90px;
+  font-size: 14px;
+  line-height: 32px;
+  @extend %dmsans-400;
+  color: $link;
+  &__nav{
+    display: flex;
+  }
+  &__link-span{
+    padding: 0 14px;
+  }
+}
+
+// footer-bottom setup ends
+
+// footer  setcion setup ends ////////////////////////////
 
 
 
