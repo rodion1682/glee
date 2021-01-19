@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 // header setcion setup starts ////////////////////////////
@@ -96,14 +97,164 @@
 
 // header setcion setup ends ////////////////////////////
 
+// top-slider setcion setup starts ////////////////////////////
+
+.top-slider{
+  background-color: $orange;
+  &__inner{
+    padding-bottom: 46px;
+  }
+  &__content{
+    max-width: 418px;
+    padding-top: 220px;
+    margin-left: 300px;
+  }
+  &__item-inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    font-size: 70px;
+    line-height: 70px;
+    color: $title;
+    margin-bottom: 36px;
+  }
+  &__text{
+    font-size: 18px;
+    line-height: 30px;
+    @extend %rubik-400;
+    margin-bottom: 40px;
+  }
+  &__btn{
+    font-size: 15px;
+    line-height: 15px;
+    color: #fff;
+    border: none;
+    background-color: #a3bbc8;
+    padding: 24px 101px 23px 27px;
+    position: relative;
+    cursor: pointer;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 19px;
+      height: 9px;
+      width: 21px;
+      background-image: url('../images/arrow-right.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  &__image{
+    padding-top: 70px;
+    margin-right: 188px;
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    li{
+      line-height: 1px;
+      padding: 0 11px;
+      button{
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        background-color: rgba(#fff, 0.3);
+        border: none;
+        @extend %rubik-500;
+        font-size: 12px;
+        color: $title;
+        cursor: pointer;
+        outline-color: #fff;
+      }
+      &.slick-active{
+        button{
+          background-color: rgba(#fff, 1);
+          width: 30px;
+          height: 30px;
+        }       
+      }
+    }
+  }
+}
+
+// top-slider setcion setup ends ////////////////////////////
+
+// offer block setup starts ////////////////////////////
+
+.offer{
+  &__wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: $bgc;
+  }
+  &__item{
+    width: 590px;
+    position: relative;
+    padding: 40px 0;
+    &::after{
+      content: "";
+      position: absolute;
+      border-right: 1px solid #e8e4df;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &__item-inner__support{
+    padding-left: 77px;
+    background-image: url('../images/icons/support.svg');
+    background-repeat: no-repeat;
+  }  
+  &__item-inner__delivery{
+    padding-left: 77px;
+    background-image: url('../images/icons/delivery.svg');
+    background-position: 1px 6px;
+    background-repeat: no-repeat;
+  }
+  &__item-inner__paymant{
+    padding-left: 87px;
+    background-image: url('../images/icons/payment.svg');
+    background-repeat: no-repeat;
+  }
+  &__item-paymant{
+    &::after{
+      display: none;
+    }
+  }
+  &__item-inner{
+    max-width: 300px;
+    margin: 0 auto;
+    min-height: 100px;
+  }
+  &__title{
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    @extend %dmsans-700;
+    color: #414141;
+    max-width: 300px;
+  }
+  &__text{
+    font-size: 16px;
+    @extend %dmsans-400;
+    color: #585858;
+    max-width: 300px;
+  }
+  &__text-support{
+    max-width: 200px;
+  }
+  &__text-paymant{
+    max-width: 200px;
+  }
+}
 
 
-
-
-
-
-
-
+// offer block setup ends ////////////////////////////
 
 
 // footer setcion setup starts ////////////////////////////
