@@ -48,3 +48,10 @@ $orange: #fcd7b6;
   font-weight: 700;
 }
 
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+

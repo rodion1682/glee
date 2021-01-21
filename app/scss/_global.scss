@@ -34,3 +34,10 @@ a{
   @extend %rubik-400;
   color: $link;
 }
+
+.title{
+  font-size: 36px;
+  line-height: 42px;
+  color: #191919;
+  @extend %dmsans-700;
+}
