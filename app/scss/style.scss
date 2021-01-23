@@ -259,7 +259,7 @@
 // productssetcion setup starts ////////////////////////////
 
 .products{
-  padding: 70px 0 95px;
+  padding: 70px 0 50px;
   &__title{
     text-align: center;
     margin-bottom: 32px;
@@ -312,16 +312,20 @@
     flex-direction: column;
     justify-content: flex-end;
     margin-bottom: 55px;
+    object-fit: cover;
   }
   &__item-hover{
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    width: 195px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
     opacity: 0;
     transition: all 0.5s;
-    display: flex;
-    flex-direction: row;
   }
   &__item-link{
     width: 55px;
@@ -332,12 +336,17 @@
     justify-content: center;
     align-items: center;
     border: 1px solid #a3bbc8;
-  }
-  &__item-link__active{
-    background-color: #a3bbc8;
-  }
-  &__item-link + .products__item-link{
-    margin-left: 15px;
+    transition: all 0.5s;
+    path{
+      fill: #a3bbc8;
+    }
+    &:hover{
+      background-color: #a3bbc8;
+      path{
+        transition: all 0.5s;
+        fill: #fff;
+      }
+    }
   }
   &__item-name{
     font-size: 16px;
@@ -353,6 +362,61 @@
     @extend %dmsans-700;
   }
 }
+
+// more-products setup starts 
+
+.more-products{
+  padding-top: 186px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 870px;
+    background-color: #feefe2;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    color: $blue;
+    position: relative;
+  }
+  &__image-box{
+    max-width: 300px;
+    height: 405px;
+    position: absolute;
+    top: -100px;
+    left: 110px;
+  }
+  &__image{
+    object-fit: cover;
+  }
+  &__content{
+    padding: 100px 152px 85px 10px;
+  }
+  &__title{
+    font-size: 26px;
+    line-height: 32px;
+    @extend %dmsans-700;
+    max-width: 248px;
+    margin-bottom: 24px;
+  }
+  &__text{
+    font-size: 16px;
+    max-width: 345px;
+    margin-bottom: 33px;
+  }
+  &__btn{
+    background-color: transparent;
+    border: 1px solid $default;
+    border-radius: 5px;
+    font-size: 15px;
+    @extend %rubik-500;
+    color: $default;
+    padding: 21px 84px 22px 18px;
+  }  
+}
+
+// more-products setup ends
 
 // products setcion setup ends ////////////////////////////
 
