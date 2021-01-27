@@ -41,3 +41,33 @@ a{
   color: #191919;
   @extend %dmsans-700;
 }
+
+.breadcrumps{
+  display: inline-flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    color: #737980;
+    font-size: 14px;
+    @extend %rubik-400;
+    padding-right: 18px;
+    position: relative;
+    &::after{
+      content: "/";
+      position: absolute;
+      right: 6px;
+      top: 0;
+    }
+    &:last-child{
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+  }
+}
