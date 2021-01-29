@@ -7,6 +7,13 @@ $(function(){
     readOnly: true,
   });
 
+  $(".big-star").rateYo({
+    starWidth: "17px",
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+    readOnly: true,
+  });
+
   $('.filter-price__input').ionRangeSlider({
     type: "double",
     prefix: "$",
