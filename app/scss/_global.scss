@@ -71,3 +71,42 @@ a{
     color: inherit;
   }
 }
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  .pagination__list{
+    display: flex;
+    padding-right: 15px;
+  }
+  &__item + .pagination__item {
+    padding-left: 15px;
+  }
+  &__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #a3bbc8;
+    background-color: #fff;
+    color: #243f4d;
+    @extend %rubik-400;
+  }
+  &__link--active{
+    background-color: #a3bbc8;
+    color: #fff;
+  }
+  &__next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 74px;
+    color: #243f4d;
+    @extend %rubik-400;
+    border: 1px solid #a3bbc8;
+  }
+}
