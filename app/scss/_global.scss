@@ -22,9 +22,91 @@ body{
   padding: 0 15px;
 }
 
+.big-container{
+  max-width: 1800px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 a{
   font-size: 14px;
   line-height: 24px;
   @extend %rubik-400;
   color: $link;
+}
+
+.title{
+  font-size: 36px;
+  line-height: 42px;
+  color: #191919;
+  @extend %dmsans-700;
+}
+
+.breadcrumps{
+  display: inline-flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    color: #737980;
+    font-size: 14px;
+    @extend %rubik-400;
+    padding-right: 18px;
+    position: relative;
+    &::after{
+      content: "/";
+      position: absolute;
+      right: 6px;
+      top: 0;
+    }
+    &:last-child{
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+  }
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  .pagination__list{
+    display: flex;
+    padding-right: 15px;
+  }
+  &__item + .pagination__item {
+    padding-left: 15px;
+  }
+  &__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #a3bbc8;
+    background-color: #fff;
+    color: #243f4d;
+    @extend %rubik-400;
+  }
+  &__link--active{
+    background-color: #a3bbc8;
+    color: #fff;
+  }
+  &__next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 74px;
+    color: #243f4d;
+    @extend %rubik-400;
+    border: 1px solid #a3bbc8;
+  }
 }
