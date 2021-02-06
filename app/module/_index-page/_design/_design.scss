@@ -1,0 +1,71 @@
+
+.design{
+  padding: 50px 0 120px;
+  &__title{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  &__filter{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 77px;
+  }
+  &__filter-btn{
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: #8b8b8b;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .mixitup-control-active{
+    color: #191919;
+  }
+  &__filter-btn + .design__filter-btn{
+    margin-left: 26px;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 34px;
+    grid-row-gap: 30px;
+  }
+  &__item{
+    background-color: #f8f8f8;
+    max-width: 370px;
+    width: 100%;
+    @extend %dmsans-700;
+    padding: 40px 0 35px 36px;
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }  
+  &__item-title,
+  &__item-materials{
+    font-size: 20px;
+    color: #191919;
+    display: block;
+  }
+  &__item-materials{
+    margin-bottom: 17px;
+  }
+  &__item-type{
+    font-size: 16px;
+    color: #a3bbc8;
+    padding-right: 5px;
+  }
+  &__item-image__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 140px;
+  }
+  &__item-image{
+    object-fit: cover;
+  }
+  &__item-content{
+    display: flex;
+  }
+}
