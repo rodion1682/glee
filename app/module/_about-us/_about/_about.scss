@@ -1,0 +1,27 @@
+
+.about{
+  padding: 85px 0 80px;
+  background-color: #fcd7b6;
+  &__inner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__number{
+    margin-top: 20px;
+    font-size: 36px;
+    line-height: 36px;
+    color: #243f4d;
+    @extend %dmsans-700;
+  }
+  &__number-text{
+    margin-top: 10px;
+    font-size: 18px;
+  }
+}

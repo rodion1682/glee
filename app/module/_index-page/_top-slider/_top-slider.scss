@@ -47,9 +47,22 @@
       background-size: cover;
     }
   }
-  &__image{
-    padding-top: 70px;
+  &__image-box{
+    margin-top: 70px;
     margin-right: 188px;
+    min-height: 634px;
+    background-image: url('../images/slider/top-slider-bg.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+    display: flex;
+    align-items: center; 
+  }
+  &__image{
+    width: 640px;
+    height: 264px;
+    object-fit: cover;
+    transform: translateX(-136px);
   }
   .slick-dots{
     display: flex;
