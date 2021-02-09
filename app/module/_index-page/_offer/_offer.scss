@@ -66,3 +66,26 @@
     max-width: 200px;
   }
 }
+
+@media (max-width: 1050px){
+  .offer{
+    .big-container{
+      padding: 0;
+    }
+    &__wrapper{
+      display: block;
+    }
+    &__item{
+      padding: 40px 10px;
+      width: 100%;
+      border-bottom: 1px solid #e8e4df;
+      &:last-child{
+        border-bottom: none;
+      }
+      &::after{
+        display: none;
+      }
+    }
+  }
+}
+

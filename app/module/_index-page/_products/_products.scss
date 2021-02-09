@@ -27,7 +27,6 @@
   &__content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1f);
     grid-column-gap: 30px;
     grid-row-gap: 40px;
   }
@@ -214,8 +213,9 @@
 .more-products{
   padding-top: 186px;
   &__inner{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
   }
   &__item{
     max-width: 870px;
@@ -273,5 +273,139 @@
       background-size: cover;
     }
   } 
+}
+
+@media (max-width: 1750px){
+  .more-products{
+    &__image-box{
+      left: 15px;
+    }
+    &__content{
+      padding: 100px 115px 85px 10px;
+    }
+  }
+}
+
+@media (max-width: 1550px){
+  .more-products{
+    &__image-box{
+      left: 0;
+    }
+    &__content{
+      padding: 100px 10px 85px;
+    }
+  }
+}
+
+@media (max-width: 1250px){
+  .products{
+    &__content{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .more-products{
+    padding-top: 60px;
+    &__inner{
+      grid-template-columns: repeat(1, 1fr) !important;
+      grid-row-gap: 20px;
+      grid-column-gap: 0px;
+    }
+    &__item{
+      min-height: 396px;
+      max-width: 100%;
+      justify-content: flex-start;
+    }
+    &__image-box{
+      top: 0;
+      max-width: 180px;
+      height: 330px;
+    }
+    &__image{
+      height: 320px;
+    }
+    &__content{
+      max-width: 100%;
+      margin-left: 400px;
+      width: 100%;
+    }
+    &__title,
+    &__text{
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1050px){
+  .products{
+    &__content{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__item{
+      margin: 0 auto;
+    }
+  }
+  .more-products{
+    &__content{
+      margin-left: 300px;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .more-products{
+    &__content{
+      margin-left: 200px;
+    }
+  }
+}
+
+@media (max-width: 650px){
+  .products{
+    &__content{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__filter{
+      display: block;
+      text-align: center;
+      margin-left: 30px;
+      margin-bottom: 60px;
+    }
+    &__filter-btn{
+      display: block;
+      text-align: center;
+    }
+    &__filter-btn + .products__filter-btn{
+      margin-left: 0;
+      padding-top: 12px;
+    }
+  }
+  .more-products{
+    &__content{
+      margin-left: 170px;
+    }
+    &__image-box{
+      top: 17%;
+      max-width: 130px;
+      height: 233px;
+    }
+    &__image{
+      height: 233px;
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .more-products{
+    &__content{
+      margin-left: 0px;
+      padding: 50px 4px 40px;
+    }
+    &__image-box{
+      display: none;
+    }
+    &__item{
+      min-height: 320px;
+    }
+  }
 }
 

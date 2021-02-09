@@ -2,8 +2,9 @@
 .video{
   background-repeat: no-repeat;
   background-size: auto;
+  background-position: center center;
   max-width: 1920px;
-  min-height: 501px;
+  height: 501px;
   position: relative;
   margin: 0 auto;
   &__link{
@@ -12,6 +13,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 1250px){
+  .video{
+    height: 401px;
+  }
+}
+
+@media (max-width: 1050px){
+  .video{
+    height: 301px;
   }
 }
 
