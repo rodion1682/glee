@@ -13,3 +13,36 @@
     align-items: center;
   }
 }
+
+@media (max-width: 1250px){
+  .blog{
+    &__wrapper{
+      padding-top: 0;
+      margin-top: 30px;
+    }
+    &__partners{
+      padding: 90px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      img{
+        margin: 20px 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px){
+  .blog{
+    &__partners{
+      padding: 70px 0;
+    }
+  }
+}
+
+@media (max-width: 420px){
+  .blog{
+    &__partners{
+      padding: 45px 0;
+    }
+  }   
+}

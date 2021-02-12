@@ -67,3 +67,16 @@
     }
   }
 }
+
+@media (max-width: 500px){
+  .account{
+    padding: 60px 0;
+    &__remember-box{
+      display: block;
+    }
+    &__label{
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+}

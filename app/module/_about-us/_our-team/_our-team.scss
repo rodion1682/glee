@@ -91,3 +91,38 @@
   }  
 }
 
+@media (max-width: 1250px){
+  .our-team{
+    &__inner{
+      display: block;
+    }
+    &__content{
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+    &__item{
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .our-team{
+    padding-top: 60px;
+    &__items{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media (max-width: 420px){
+  .our-team{
+    &__items{
+      grid-row-gap: 65px;
+    }
+    &__about-box{
+      padding: 27px 5px;
+    }
+  }
+}
+

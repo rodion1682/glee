@@ -47,6 +47,7 @@ a{
   justify-content: center;
   &__list{
     display: flex;
+    flex-wrap: wrap;
   }
   &__item{
     color: #737980;
@@ -108,6 +109,15 @@ a{
     color: #243f4d;
     @extend %rubik-400;
     border: 1px solid #a3bbc8;
+  }
+}
+
+@media (max-width: 500px){
+  .pagination{
+    justify-content: center !important;
+    &__next{
+      display: none;
+    }
   }
 }
 

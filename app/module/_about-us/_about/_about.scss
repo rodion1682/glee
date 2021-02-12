@@ -25,3 +25,29 @@
     font-size: 18px;
   }
 }
+
+@media (max-width: 1050px){
+  .about{
+    padding: 45px 0 40px;
+    &__inner{
+      flex-wrap: wrap;
+    }
+    &__item{
+      max-width: 50%;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .about{
+    &__item{
+      max-width: 100%;
+      margin-bottom: 40px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
